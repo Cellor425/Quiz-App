@@ -4,6 +4,7 @@ require_once("Template.php");
 
 $page = new Template("Form Confirmation");
 //$page->addHeadElement("<script src='hello.js'></script>");
+$page->addHeadElement("<link rel='stylesheet' href='primary.css'>");
 $page->finalizeTopSection();
 
 //Some libraries require things to be added before the closing body tag.
@@ -14,12 +15,10 @@ $page->finalizeBottomSection();
 
 print $page->getTopSection();
 
-if (!empty($_POST)){
+if (!empty($_POST) || isset($_POST)) {
     print "<h1>Form submitted successfully</h1>\n";
 } else {
     print "<h1>There was an error submitting the form</h1>\n";
 }
 
 print $page->getBottomSection();
-
-?>

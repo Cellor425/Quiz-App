@@ -1,0 +1,3 @@
+a. 1612cfad762d0346170f94031b598b220c897680
+b. https://github.com/Cellor425/CNMT310
+c. http://cnmtsrv2.uwsp.edu/~mschn143/TemplatingAndForms/
