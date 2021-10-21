@@ -18,15 +18,15 @@ print $page->getTopSection();
 
 // Page Content here
 print "
-<div class='container-sm'>
+<div class='container-sm form-container'>
     <form id='loginForm' class='needs-validation' action='confirm.php' method='post'>
         <div class='mb-3'>
             <label for='username' class='form-label boldness'>Username:</label><br>
-            <input type='text' class='form-control' id='username' onchange='validate()' /><br>
+            <input name='username' type='text' class='form-control' id='username' onchange='validate()' /><br>
         </div>
         <div class='mb-3'>
             <label for='password' class='form-label boldness''>Password:</label><br>
-            <input type='text' class='form-control' id='password' onchange='validate()' /><br>
+            <input name='password' type='text' class='form-control' id='password' onchange='validate()' /><br>
             <div id='helpBlock' class='form-text'>
             <p>Password must contain:<br> 
                 2 Uppercase Letters (A-Z)<br>
@@ -36,13 +36,13 @@ print "
             </div>
         </div>
         <div class='mb-3'>
-        <label for='email' class='form-label boldness'>Email Address:</label><br>
-        <input type='text' class='form-control' id='email' onchange='validate()' /><br><br>
+        <label for='email' class='form-label boldness' >Email Address:</label><br>
+        <input name='email' type='text' class='form-control' id='email' onchange='validate()' /><br><br>
         </div>
         <div class='mb-3'>
-            <p id='errors'></p>
+            <p id='errors' class='boldness'></p>
         </div>
-        <button id='register' type='submit' formmethod='post' class='btn btn-primary' disabled='true'>Submit</button>
+        <button id='register' type='submit' formmethod='post' class='btn btn-success'>Submit</button>
     </form>
 </div>
 ";
