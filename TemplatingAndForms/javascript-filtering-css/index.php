@@ -1,18 +1,26 @@
 <?php
 
-require_once("Template.php");
+require_once("../classes/Template.php");
 
-$page = new Template("Template Form");
+$page = new Template("User Registration");
+
+// Bootstrap, external stylesheet
 $page->addHeadElement("<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous'>");
-$page->addHeadElement("<link rel='stylesheet' href='primary.css'>");
-$page->addHeadElement("<script src='form-validation.js'></script>");
+
+// Internal stylesheets
+$stylesheets = array();
+$stylesheets[] = "css/site.css";
+$stylesheets[] = "css/form.css";
+
+foreach ($stylesheets as $stylesheet) {
+    $css = "<link rel=\"stylesheet\" href=\"" . $stylesheet . "\">\n";
+    $page->addHeadElement($css);
+}
 $page->finalizeTopSection();
 
 // Some libraries require things to be added before the closing body tag.
 // Pretty much the same thing as addHeadElement
 // Use addBottomElement() for that.  See the method in the Template class.
-
-$page->finalizeBottomSection();
 
 print $page->getTopSection();
 
@@ -46,5 +54,6 @@ print "
     </form>
 </div>
 ";
-
+$page->addHeadElement("<script src='js/form-validation.js'></script>");
+$page->finalizeBottomSection();
 print $page->getBottomSection();

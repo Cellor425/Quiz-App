@@ -1,0 +1,17 @@
+.form-control {
+    background-color: #c9dbe8;
+    border-radius: 10px;
+}
+
+#helpBlock {
+    background-color: lemonchiffon;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 10px;
+    padding-left: 2rem;
+}
+  
+.form-container {
+    background-color: azure;
+    padding: 2rem;
+}

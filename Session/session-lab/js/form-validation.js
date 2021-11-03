@@ -29,7 +29,7 @@ function validate(){
     
     // At this point the form should be valid
     if (check.result){
-        //document.getElementById("register").disabled = false;
+        document.getElementById("register").disabled = false;
     }
 }
 

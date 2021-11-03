@@ -1,0 +1,13 @@
+body {
+  padding: 2rem;
+  background-color: #709ec2;
+  font-family: arial, verdana, sans-serif;
+}
+
+.boldness {
+  font-weight: bolder;
+}
+
+p {
+  color: black;
+}
