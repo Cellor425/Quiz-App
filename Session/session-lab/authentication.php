@@ -28,7 +28,7 @@ if(!password_verify($_POST['password'], $hpass)){
 // Username and Password have passed verification
 // Add them to the session
 $_SESSION['username'] = $username;
-$_SESSION['auth'] = time();
+$_SESSION['auth'] = date('Y-m-d');
 $_SESSION['realname'] ="Mike";
 
 die(header("Location: home.php"));
