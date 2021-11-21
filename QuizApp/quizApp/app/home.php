@@ -22,7 +22,7 @@ $stylesheets[] = "../css/site.css";
 $stylesheets[] = "../css/form.css";
 
 foreach ($stylesheets as $stylesheet) {
-    $css = "<link rel=\"stylesheet\" href=\"" . $stylesheet . "\">\n";
+    $css = "<link rel=\"stylesheet\" href=\"" . $stylesheet . "\">";
     $page->addHeadElement($css);
 }
 

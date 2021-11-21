@@ -47,7 +47,7 @@ $stylesheets[] = "../../css/site.css";
 $stylesheets[] = "../../css/form.css";
 
 foreach ($stylesheets as $stylesheet) {
-    $css = "<link rel=\"stylesheet\" href=\"" . $stylesheet . "\">\n";
+    $css = "<link rel=\"stylesheet\" href=\"" . $stylesheet . "\">";
     $page->addHeadElement($css);
 }
 
@@ -73,11 +73,11 @@ if (isset($_SESSION['result'])) {
 print "
     <h2>" . $_SESSION['question'] . "</h2>
     <form id=\"quizForm\" action=\"./evaluate.php\" method=\"post\">
-        <div class='mb-3'>
-            <label for='answer' class='form-label boldness'>Answer:</label><br>
-            <input name='answer' type='text' class='form-control' id='answer' /><br>
+        <div class=\"mb-3\">
+            <label for=\"answer\" class=\"form-label boldness\">Answer:</label><br>
+            <input name=\"answer\" type=\"text\" class=\"form-control\" id=\"answer\" /><br>
         </div>
-        <button id='register' type='submit' formmethod='post' class='btn btn-success'>Submit</button>
+        <button id=\"register\" type=\"submit\" formmethod=\"post\" class=\"btn btn-success\">Submit</button>
     </form>
 </div>
 ";
