@@ -7,8 +7,13 @@ session_start();
 $usernameCheck = !isset($_SESSION['username']) || empty($_SESSION['username']);
 $realnameCheck = !isset($_SESSION['realname']) || empty($_SESSION['realname']);
 $authCheck = !isset($_SESSION['auth']) || empty($_SESSION['auth']);
-if ($usernameCheck || $realnameCheck || $authCheck) {
+if ($usernameCheck || $realnameCheck || $authCheck ||) {
     die(header("HTTP/1.1 404 Not Found"));
+}
+
+// Check if the user is logged in
+if (!$_SESSION['isLoggedIn']){
+    die(header("Location: index.php"));
 }
 
 // Display a welcome message using the real name and the time of last auth

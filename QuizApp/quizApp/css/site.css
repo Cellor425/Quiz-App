@@ -1,0 +1,25 @@
+body {
+  padding: 2rem;
+  background-color: #709ec2;
+  font-family: arial, verdana, sans-serif;
+}
+
+.boldness {
+  font-weight: bolder;
+}
+
+p {
+  color: black;
+}
+
+.nav {
+  background-color: #c9dbe8;
+}
+
+.resultBlock {
+  background-color: rgb(248, 250, 127);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 10px;
+  padding-left: 2rem;
+}

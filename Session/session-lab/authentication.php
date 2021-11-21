@@ -7,20 +7,18 @@ if (!isset($_POST['username']) || !isset($_POST['password'])) {
 
 // Start session
 session_start();
+$_SESSION['isLoggedIn'] = false;
 
 // Authentication varibles
 $username = "mike";
 $hpass = '$2y$10$eVVsSaKVkXQYuqzpL7EaGOealC0xHxH2wdJXc5NuDJ62YrnQEE4BG';
-$errors = false;
 
-// Run username verification
 if($_POST['username'] != $username){
+    // Run username verification
     $_SESSION['error'] = "Username authentication not good.";
     die(header("Location: index.php"));
-}
-
-// Run password verification
-if(!password_verify($_POST['password'], $hpass)){
+} else if(!password_verify($_POST['password'], $hpass)){
+    // Run password verification
     $_SESSION['error'] = "Password authentication not good.";
     die(header("Location: index.php"));
 }
@@ -30,5 +28,6 @@ if(!password_verify($_POST['password'], $hpass)){
 $_SESSION['username'] = $username;
 $_SESSION['auth'] = date('Y-m-d');
 $_SESSION['realname'] ="Mike";
+$_SESSION['isLoggedIn'] = true;
 
 die(header("Location: home.php"));
