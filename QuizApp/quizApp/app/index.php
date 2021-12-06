@@ -3,12 +3,11 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
 }
 
-require_once("../../classes/Template.php");
-$page = new Template("Sign In");
+require_once("../../classes/shared/BootstrapTemplate/BootstrapTemplate.php");
+$page = new BootstrapTemplate("Sign In");
 
 // Internal stylesheets
 $stylesheets = array();
-$stylesheets[] = "../css/bootstrap.min.css";
 $stylesheets[] = "../css/site.css";
 $stylesheets[] = "../css/form.css";
 

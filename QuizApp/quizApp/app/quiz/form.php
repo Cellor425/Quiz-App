@@ -37,12 +37,11 @@ if (!isset($_SESSION['question']) || !isset($_SESSION['answer'])) {
 }
 
 // Use Template for page creation
-require_once("../../../classes/Template.php");
-$page = new Template("Quiz Question");
+require_once("../../../classes/shared/BootstrapTemplate/BootstrapTemplate.php");
+$page = new BootstrapTemplate("Quiz Question", "../../css/shared/bstemplate", "../../js/shared/bstemplate");
 
 // Internal stylesheets
 $stylesheets = array();
-$stylesheets[] = "../../css/bootstrap.min.css";
 $stylesheets[] = "../../css/site.css";
 $stylesheets[] = "../../css/form.css";
 
@@ -56,11 +55,15 @@ print $page->getTopSection();
 
 // Page Content here
 print "
-<nav class=\"nav\">
-    <a class=\"nav-link\" href=\"../home.php\">Home</a>
-    <a class=\"nav-link active\" aria-current=\"page\" href=\"./form.php\">Quiz</a>
-    <a class=\"nav-link\" href=\"../account/logout.php\">Log Out</a>
-</nav>
+<div class=\"container\">
+    <header class=\"d-flex justify-content-center py-3\">
+      <ul class=\"nav nav-pills\">
+        <li class=\"nav-item\"><a href=\"../home.php\" class=\"nav-link\">Home</a></li>
+        <li class=\"nav-item\"><a href=\"./quiz/form.php\" class=\"nav-link\">Quiz</a></li>
+        <li class=\"nav-item\"><a href=\"../account/logout.php\" class=\"nav-link\">Log Out</a></li>
+      </ul>
+    </header>
+</div>
 <div class=\"container-sm form-container\">
 ";
 
